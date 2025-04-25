@@ -1,79 +1,81 @@
-img{
-    max-width: 23%;
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5; /* Cor de fundo */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px; /* Espaçamento entre os elementos */
+}
+
+img {
+    max-width: 30%;
     height: auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 300px;
-    box-shadow: 10px 10px 20px rgb(80, 6, 252);
+    border-radius: 80px; /* Bordas arredondadas */
 }
-div{
-    position: absolute;
-    left: 35%;
-    top: 84px;
-    font-size: large;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+h1 {
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
 }
-h2{
-    position: absolute;
-    top: 390px;
-    right: 5px;
-    width: 100%;
-    text-align: center;
-    display: inline;
-    font-size: 60px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    color: black;
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
 }
-p{
-    position: absolute;
-    top: 70px;
-    right: 5px;
-    width: 100%;
-    text-align: center;
-    display: inline;
-    font-size: 20px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    color: black;
+
+p {
+    font-size: 1.2rem;
+    color: #555;
 }
-a{
-    color: rgb(19, 18, 18);
+
+a {
+    font-size: 1.2rem;
+    color: rgb(5, 5, 5);
     text-decoration: none;
-    font-size: 20px;
-    font-family: sans-serif;
     font-weight: bold;
-    text-align: center;
-    display: block;
-    padding: 10px;
-    position: absolute;
-    top: 150px;
-    left: 468px;
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
 .emoji-cascade {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
+    pointer-events: none; /* Impede interação com os emojis */
     overflow: hidden;
-    z-index: -1;
 }
 
 .emoji {
     position: absolute;
-    animation: fall 5s linear infinite;
-    opacity: 0.8;
+    animation: fall 5s linear infinite; /* Animação de queda */
+    opacity: 0.8; /* Transparência dos emojis */
 }
 
 @keyframes fall {
     0% {
-        transform: translateY(-100%);
-        opacity: 1;
+        transform: translateY(-100px); /* Começa fora da tela */
+        opacity: 0; /* Invisível no início */
+    }
+    10% {
+        opacity: 1; /* Torna-se visível */
     }
     100% {
-        transform: translateY(100vh);
-        opacity: 0;
+        transform: translateY(100vh); /* Cai até o final da tela */
+        opacity: 0; /* Desaparece ao final */
     }
 }

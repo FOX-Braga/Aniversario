@@ -7,37 +7,33 @@
     <link rel="stylesheet" href="styles_carta.css">
 </head>
 <body>
-    <img src="foto/WhatsApp Image 2025-03-30 at 23.42.04.jpeg" alt="natallia">
-    <div>
-        <h1> 23 <br> ANOS</h1>
-
+    <div class="main-container">
+        <img src="foto/WhatsApp Image 2025-03-30 at 23.42.04.jpeg" alt="natallia">
+        <div>
+            <h1>23 <br> ANOS</h1>
+        </div>
+        <h2>da naty</h2>
+        <p>DIA 28/04 às 19H<br>
+            venha comemorar com a gente!<br>
+        </p>
+        <a href="https://www.google.com/maps/place/Bar+Mercearia/@-20.464517,-54.6127189,17z/data=!3m1!4b1!4m6!3m5!1s0x9486e61ff2e7b68d:0x12aff8505a95237e!8m2!3d-20.464517!4d-54.610144!16s%2Fg%2F1t_h_21s?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D">LOCAL📍</a>
     </div>
-  
+    <div class="emoji-cascade"></div>
 
-        <h2> da naty<h2>
-            <p>DIA 28/04 as 19H
-                <br>
-                venha comemorar com a gente!<br>
-            </p>
-            <a href="https://www.google.com/maps/place/Bar+Mercearia/@-20.464517,-54.6127189,17z/data=!3m1!4b1!4m6!3m5!1s0x9486e61ff2e7b68d:0x12aff8505a95237e!8m2!3d-20.464517!4d-54.610144!16s%2Fg%2F1t_h_21s?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D">LOCAL📍</a>
-            
-        </body>
-        
+    <script>
+        const emojiContainer = document.querySelector('.emoji-cascade');
+        const emojis = ['🎉', '🎂', '🎈', '🎁', '✨', '🎊'];
+        const emojiCount = 30;
+
+        for (let i = 0; i < emojiCount; i++) {
+            const emoji = document.createElement('span');
+            emoji.className = 'emoji';
+            emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            emoji.style.left = Math.random() * 100 + '%';
+            emoji.style.animationDelay = Math.random() * 5 + 's';
+            emoji.style.fontSize = Math.random() * 20 + 20 + 'px'; // Tamanhos variados
+            emojiContainer.appendChild(emoji);
+        }
+    </script>
+</body>
 </html>
-<div class="emoji-cascade"></div>
-
-<script>
-    const emojiContainer = document.querySelector('.emoji-cascade');
-    const emojis = ['🎉', '🎂', '🎈', '🎁', '✨', '🎊'];
-    const emojiCount = 30;
-
-    for (let i = 0; i < emojiCount; i++) {
-        const emoji = document.createElement('span');
-        emoji.className = 'emoji';
-        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-        emoji.style.left = Math.random() * 100 + '%';
-        emoji.style.animationDelay = Math.random() * 5 + 's';
-        emoji.style.fontSize = Math.random() * 20 + 20 + 'px'; // Tamanhos variados
-        emojiContainer.appendChild(emoji);
-    }
-</script>
