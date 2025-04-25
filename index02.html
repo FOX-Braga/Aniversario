@@ -24,16 +24,18 @@
         const emojiContainer = document.querySelector('.emoji-cascade');
         const emojis = ['🎉', '🎂', '🎈', '🎁', '✨', '🎊'];
         const emojiCount = 30;
+    const isMobile = window.innerWidth <= 768; // Detecta se é um dispositivo móvel
+    const emojiCount = isMobile ? 20 : 50; // Menos emojis no celular para melhor desempenho
 
-        for (let i = 0; i < emojiCount; i++) {
-            const emoji = document.createElement('span');
-            emoji.className = 'emoji';
-            emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-            emoji.style.left = Math.random() * 100 + '%';
-            emoji.style.animationDelay = Math.random() * 5 + 's';
-            emoji.style.fontSize = Math.random() * 20 + 20 + 'px'; // Tamanhos variados
-            emojiContainer.appendChild(emoji);
-        }
-    </script>
+    for (let i = 0; i < emojiCount; i++) {
+        const emoji = document.createElement('span');
+        emoji.className = 'emoji';
+        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        emoji.style.left = Math.random() * 100 + '%';
+        emoji.style.animationDelay = Math.random() * 5 + 's';
+        emoji.style.fontSize = Math.random() * (isMobile ? 15 : 25) + 15 + 'px'; // Tamanhos menores no celular
+        emojiContainer.appendChild(emoji);
+    }
+</script>
 </body>
 </html>
