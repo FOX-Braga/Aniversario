@@ -24,7 +24,7 @@
     const emojiContainer = document.querySelector('.emoji-cascade');
     const emojis = ['🎉', '🎂',];
     const isMobile = window.innerWidth <= 768; // Detecta se é um dispositivo móvel
-    const emojiCount = isMobile ? 20 : 50; // Menos emojis no celular para melhor desempenho
+    const emojiCount = isMobile ? 20 : 10; // Menos emojis no celular para melhor desempenho
 
     for (let i = 0; i < emojiCount; i++) {
         const emoji = document.createElement('span');
